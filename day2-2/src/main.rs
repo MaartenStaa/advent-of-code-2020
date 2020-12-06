@@ -2,7 +2,7 @@ use lazy_static::lazy_static;
 use regex::Regex;
 use std::num::ParseIntError;
 
-const INPUT: &'static str = include_str!("../input.txt");
+const INPUT: &str = include_str!("../input.txt");
 
 struct Input {
     position_1: usize,
@@ -43,7 +43,7 @@ fn parse_line(line: &str) -> Result<Input, ParseIntError> {
     let captures = RE.captures(line).unwrap();
 
     Ok(Input {
-        character: captures["character"].chars().nth(0).unwrap(),
+        character: captures["character"].chars().next().unwrap(),
         position_1: captures["pos_1"].parse()?,
         position_2: captures["pos_2"].parse()?,
         password: captures["password"].to_owned(),

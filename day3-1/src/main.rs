@@ -1,4 +1,4 @@
-const INPUT: &'static str = include_str!("../input.txt");
+const INPUT: &str = include_str!("../input.txt");
 
 fn main() {
     let map: Vec<Vec<_>> = INPUT

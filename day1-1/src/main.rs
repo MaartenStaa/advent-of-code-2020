@@ -1,6 +1,6 @@
 use std::num::ParseIntError;
 
-const INPUT: &'static str = include_str!("../input.txt");
+const INPUT: &str = include_str!("../input.txt");
 const EXPECTED: u32 = 2020;
 
 fn main() -> Result<(), ParseIntError> {
